@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-
+console.log('filewatch start');
 var files = process.argv.slice(2),
     cmd = files.pop(),
     Watch = require('../');
 
+console.log('files: ' + JSON.stringify(files));
 var watcher = new Watch(files, {}, cmd);
 
 watcher.start();
